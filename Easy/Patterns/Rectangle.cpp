@@ -97,28 +97,69 @@ void pattern7(int n)
 
 void pattern8(int n)
 {
-    for (size_t i = 0; i < n; i++)
+    for (size_t i = 1; i <= n; i++)
     {
-        for (size_t j = 0; j < n - i - n; j++)
+        for (size_t j = 0; j < i; j++)
         {
             cout << " ";
         }
 
-        for (size_t j = 0; j < 2 * n + 1; j++)
+        for (size_t j = 0; j < (2 * n + 1) - (i * 2); j++)
         {
             cout << "*";
         }
 
-        for (size_t j = 0; j < n - i - n; j++)
+        for (size_t j = 0; j < i; j++)
         {
             cout << " ";
         }
+        cout << endl;
     }
 }
 
+void pattern9(int n)
+{
+    pattern7(n);
+    pattern8(n);
+}
+
+void pattern10(int n){
+    for (size_t i = 0; i <= 2 * n - 1; i++)
+    {
+        int stars = i;
+        if (i > n)
+        {
+            stars = 2 * n - i;
+        }
+
+        for (size_t j = 0; j < stars; j++)
+        {
+            cout << "*";
+        }
+
+        cout << endl;
+    }
+}
+
+void pattern11(int n){
+    int start = 1;
+    for (size_t i = 1; i <= n; i++)
+    {
+        if(i % 2 == 0) start = 0;
+        else start = 1;
+        for (size_t j = 1; j <= i; j++)
+        {
+            cout << start;
+            start = 1 - start;
+        }
+        
+        cout << endl;
+    }
+    
+}
 int main()
 {
-    pattern8(5);
+    pattern11(5);
     cout << "" << endl;
     return 0;
 }
