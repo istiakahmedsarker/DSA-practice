@@ -157,9 +157,48 @@ void pattern11(int n){
     }
     
 }
+
+void pattern12(int n){
+    for (size_t i = 1; i <= n; i++)
+    {
+        // first nums
+        for (size_t j = 1; j <= i; j++)
+        {
+            cout << j;
+        }
+        // spaces
+        for (size_t j = 0; j < (n *2) - (i*2); j++)
+        {
+            cout << " ";
+        }
+        
+        // second nums
+        for (size_t j = i; j > 0; j--)
+        {
+            cout << j;
+        }
+        cout << endl;
+    }
+    
+}
+
+void pattern13(int n){
+    int counts = 1;
+    for (size_t i = 0; i <= n; i++)
+    {
+        for (size_t j = 0; j < i; j++)
+        {
+            cout << counts << " ";
+            counts++;
+        }
+        cout << endl;
+    }
+    
+}
+
 int main()
 {
-    pattern11(5);
+    pattern13(3);
     cout << "" << endl;
     return 0;
 }
