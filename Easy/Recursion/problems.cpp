@@ -28,14 +28,23 @@ void problemArray(int i, int n, vector<int> &arr)
     problemArray(i + 1, n, arr);
 }
 
+int fibonacci(int n){
+    if(n<= 1) return n;
+
+    int last = fibonacci(n-1);
+    int sLast = fibonacci(n-2);
+
+    return last + sLast;
+}
+
 int main()
 {
-    vector<int> arr = {1, 2, 3, 4, 2};
-    problemArray(0, arr.size()-1, arr); // Pass arr.size() instead of arr.size() - 1
-    for (int num : arr)
-    {
-        cout << num << " ";
-    }
-    cout << endl;
+    // vector<int> arr = {1, 2, 3, 4, 2};
+    // problemArray(0, arr.size()-1, arr); // Pass arr.size() instead of arr.size() - 1
+    // for (int num : arr)
+    // {
+    //     cout << num << " ";
+    // }
+    cout << fibonacci(150) << endl;
     return 0;
 }
