@@ -28,6 +28,16 @@ void problemArray(int i, int n, vector<int> &arr)
     problemArray(i + 1, n, arr);
 }
 
+// for (size_t i = 0; i < arr.size(); i++)
+//     {
+//         for (size_t j = i; j < arr.size(); j++)
+//         {
+//             sum += arr[j];
+//             if(sum > longestArr) longestArr = sum;
+//         }
+//     }
+//     return longestArr;
+
 int fibonacci(int n){
     if(n<= 1) return n;
 
